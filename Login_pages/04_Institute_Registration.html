@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: #90cdf4;
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="04_Institute_Registration_storing_in_database.php">
+        <h3>Institute Registration</h3>
+        <div>
+            <label for="">Name Of Institute</label>
+            <input type="text" name="insitute_name" id="institute_name" required>
+            <label for="">Insitute Code (according to AICTE)</label>
+            <input type="text" name="insitute_code" id="institute_code" required>
+        </div>
+        <div>
+            <label for="">State of Institute</label>
+            <select name="institute_state" id="institute_state">
+                <option value="#">- Select -</option>
+                <option value="delhi">Delhi</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="uttar_pradesh">Uttar Pradesh</option>
+                <option value="madhya_pradesh">Madhya Pradesh</option>
+            </select>
+            <label for="">Region Of Institute</label>
+            <select name="institute_region" id="institute_region">
+            <option value="#">- Select -</option>
+
+                <option value="">North</option>
+                <option value="">South</option>
+                <option value="">East</option>
+                <option value="">West</option>
+                <option value="">Center</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Address of the Intitute</label>
+            <input type="text"name="institute_address" id="institute_address" required>
+            <label for="">Contact Number Of Institute</label>
+            <input type="text"name="institute_contact_number" id="institute_contact_number" required>
+        </div>
+        <div>
+            <label for="">Email of the Institute:</label>
+            <input type="text"name="institute_email" id="institute_email" required>
+            <label for="">Type of Institute</label>
+            <select name="institute_type" id="institute_type">
+            <option value="#">- Select -</option>
+                <option value="Engineering">ENGINEERING</option>
+                <option value="Polytechnic">Polytechnic</option>
+                <option value="Medical">Medical</option>
+                <option value="Agriculture">Agriculture</option>
+                <!-- <option value="Engineering">Engineering</option>
+                <option value="Polytechnic">Polytechnic</option>
+                <option value="Bacholers_in_Computer_application ">Bacholers in Computer Application</option> -->
+            </select>
+            
+            <div>
+                <label for="">Username</label>
+                <input type="text"name="institute_username" onblur="checkUsername()" id="institute_username" required>
+                <label for="">Password</label>
+                <input type="text"name="institute_password" onblur="checkPassword()" id="institute_password" required>
+            </div>
+            
+           <center><button class="submit-button">Submit</button></center> 
+        </div>
+    </form>
+</body>
+
+<script>
+    function checkUsername() {
+            String_variable = document.getElementById("username_selection")
+            regular_expression = /^[A-z0-9_]{4,20}$/gim
+            if (String_variable.value != "") {
+                if (!(regular_expression.test(String_variable.value))) {
+                    alert("User name can have 4-20 characters and can be only Alphanumeric along with underscore(_)  ");
+                    document.getElementById("username_selection").value = "";
+                }
+            }
+        }
+        function checkPassword() {
+            String_variable = document.getElementById("password_generation")
+            regular_expression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d_/!@#$%^&*+=()-]{5,20}$/gim
+            if (String_variable.value != "") {
+                if (!(regular_expression.test(String_variable.value))) {
+                    alert("Password must be Alphanumeric and can contain some of the special symbols");
+                    document.getElementById("password_generation").value = "";
+                }
+            }
+            
+        }
+</script>
+</html>

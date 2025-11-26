@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family:Poppins ; */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: Calibri;
+    width: 100vw;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 50px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.navbar {
+    background-color: rgb(165, 243, 217);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    font-size: 15px;
+    margin-right: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family:Poppins ;
+}
+
+li #loginDropdown {
+    width: 70px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(232, 94, 94);
+    margin: 5px;
+    cursor: pointer;
+}
+
+li #loginDropdown option{
+    padding: 30px;
+}
+
+.heading-news {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.564);
+}
+
+.news-heading {
+    background-color: crimson;
+    color: white;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 20px;
+}
+
+.news-message {
+    font-size: 18px;
+    color: red;
+    width: 90%;
+}
+
+#main {
+    background-color: rgba(137, 202, 243, 0.68);
+}
+
+.image-slides {
+    margin: 2px 0;
+}
+
+#All-modules {
+    min-height: 35vh;
+    width: 100%;
+    background-color: rgb(126, 157, 224);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-evenly;
+    /* overflow: hidden; */
+}
+#All-modules .box-head a li {
+    background-color: red;
+}
+.box-head{
+    width: 20%;
+}
+.notice-board {
+    width: 130%;
+    height: 400px;
+    margin: 10px;
+    background-color: #fdfafa;
+    color: red;
+    border: 1px solid #3174f1c8;
+    float: left;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+    .notice-board-heading {
+        height: 10%;
+        background-color: #0059ffc8;
+        color: white;
+        padding: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+        /* margin-bottom: 10px; */
+        margin: 0;
+    }
+
+.notice-board-heading-text {
+    width: 100%;
+    background-color: #0059ff00;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.notice-content {
+    margin: 20px;
+    margin-top: 5px;
+    height: 344px;
+    margin-bottom: 0;
+}
+.marquee {
+    
+    height:200px;
+    background-color: white;
+    color: red;
+}
+
+.marquee li{
+    background-color: white;
+    color: red;
+    line-height: 20px;
+    margin: 10px;
+}
+#All-modules #new-applicant,
+#institute_login,
+#home_state_login,
+#current_state_login,
+#information_data {
+    width: 150px;
+    min-height: 200px;
+    background-color: rgb(163, 238, 250);
+    margin: 5px;
+    padding: 10px 25px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: solid 1px rgb(0, 165, 242);
+    border-radius: 10px;
+}
+
+#All-modules #new-applicant,
+#institute_login,
+#home_state_login,
+#current_state_login,
+#information_data,
+a {
+    text-decoration: none;
+    line-height: 25px;
+    display: block;
+}
+
+#All-modules #new-applicant,
+#institute_login,
+#home_state_login,
+#current_state_login,
+#information_data,
+h1 {
+    width: 100vw;
+    font-size: 100%;
+}
+
+.box-head a li{
+    background-color: red;
+}
+
+/* .notice-board {
+    width: 30%;
+    min-height: 200px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #3174f1c8;
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.notice-board-heading {
+    background-color: #d4d9e4c8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+} */
+
+/* .notice-board-content {
+  
+} */
+
+/* .boards {
+    margin: 15px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
+
+
+/* table {
+    border-collapse: collapse;
+}
+
+.table-head tr th {
+    background-color: #3174f1c8;
+}
+
+table th, td, tr {
+    padding: 27px 55px;
+    background-color: white;
+    border: 2px solid black;
+} */
+
+  @keyframes slider {
+
+    from{
+      transform: translateX(0);
+
+    }
+    to{
+      transform: translateX(-100%);
+
+    }
+    
+  }
+  .statelogos{
+   min-height: 50vh;
+    overflow: hidden;
+    padding: 50px 0;
+    padding-top: 5px;
+    white-space: nowrap;
+    margin-top: 0;
+
+  }
+  .statelogos .nsp{
+    background-color: #0059ffb8;
+  }
+  .statelogos img{
+    margin: 0 0 50px 0;
+    height: 300px;
+    width: auto;
+    margin-left: 30%;
+    margin-bottom: 0;
+    
+  }
+.state-text{
+    padding: 10px;
+    
+    line-height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(40% , -50%);
+}
+.state-text p{
+    font-size: 30px;
+    /* font-family: Madimi one; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-6% , -50%);
+    margin-top: 75px;
+    
+}
+  .state-logo-slider{
+    /* width: 100%; */
+    display: flex;
+    background-color: rgba(173, 209, 231, 0);
+    animation: 25s slider infinite linear;
+
+  }
+  .state-logo-slider:hover{
+    animation-play-state: paused;
+  }
+  .state-logo-slider img{
+    height: 150px;
+    margin: 0px 50px 10px 0;
+    
+  }
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer h2 {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page For Scholarship</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- <style>
+        .notice-board:hover .notice-content {
+            animation-play-state: paused;
+        }
+    </style> -->
+    <link rel="stylesheet" href="home_page.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-div">
+            <div class="site-logo"><a href="#">FreeScholarship</a></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="01_about_us.html">About</a></li>
+                <li> <a href="#"><select name="loginfromTop" id="loginDropdown" onchange="updateHref()">
+                            <option value="0">Login</option>
+                            <option value="1">Applicant</option>
+                            <option value="2">Institute</option>
+                            <option value="3">Admin (current state)</option>
+                            <option value="4">Admin (MH state)</option>
+                        </select></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="heading-news" onmouseover="stopMarque()" onmouseout="startMarque()">
+        <b class="news-heading">Updates : </b>
+        <marquee class="news-message" direction="">All Form Filling Processes Are Extended Till 2050.............. So
+            kindly forget Scholorship and Spend Ur Own money...........</marquee>
+    </div>
+
+
+    <div id="main">
+
+        <div class="image-slides">
+            <img src="https://scholarships.gov.in/public/Content/img/slider1.jpg" id="i1" alt="Connect internet">
+        </div>
+
+        <div id="All-modules">
+            <div class="notice-board" onmouseover="stopMarquee()" onmouseout="startMarquee()">
+                <div class="notice-board-heading">
+                    <h3 class="notice-board-heading-text"><i class="ri-megaphone-line">Notice-Board</i></h3>
+                </div>
+                <marquee behavior="" direction="up" class="notice-content">
+                    <ul>
+                        <li><i class="ri-information-2-fill"></i>Aadhaar Data Vault Services will be undergoing for
+                            scheduled maintenance on Friday, 26th January 2024 from 4:00 PM to 6:00 PM IST
+                            (expected). Some of Services including new applicant registration, KYC Registration of
+                            Institutes etc will be affected due to this maintenance activity. Applicants, Institutes
+                            are advised to plan their operations on the portal accordingly.</li>
+                        <li><i class="ri-information-2-fill"></i>Those applicants who were not selected in the merit
+                            list during previous years can apply as fresh applicant during AY 2023-24 provided it is
+                            allowed as per scheme guidelines.</li>
+                        <li><i class="ri-information-2-fill"></i>Scholarship Portal is open for application
+                            submission for AY 2023-24:
+                            Students are advised to:
+                            1. Keep Aadhaar ready
+                            2. Link mobile no. with Aadhaar
+                            3. Seed bank A/C with Aadhaar</li>
+                        <li><i class="ri-information-2-fill"></i>Coming Soon: We are thrilled to announce the launch
+                            of the Arts and Humanities Scholarship. Start polishing your portfolios as the
+                            application process begins on 15/02/2024.</li>
+                        <li><i class="ri-information-2-fill"></i>Future Leaders Wanted! Our Leadership Development
+                            Scholarship applications will be live on 11/02/2024. Showcase your leadership skills and
+                            secure support for your academic pursuits.</li>
+                        <li><i class="ri-information-2-fill"></i>Reminder: The deadline for submitting applications
+                            for the Sports Achievement Scholarship is 25/02/2024. Don't miss out on the opportunity
+                            to
+                            combine your passion for sports with financial assistance for your education.</li>
+
+                    </ul>
+                </marquee>
+
+            </div>
+            <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+            <div id="new-applicant">
+                <div class="box-head">
+                    <h1><i class="ri-edit-line"></i> Applicant Corner</h1>
+                </div><hr>
+
+
+                <ul>
+                    <a href="02_New_Registration.html">
+                        <li>New Registration</li>
+                    </a>
+                    <a href="03_03_login_form_applicant.html">
+                        <li>Login as student</li>
+                    </a>
+
+
+                </ul>
+
+            </div>
+
+            <!-- //----------------------------------------------------------------------------------------------------------------------            -->
+            <div id="institute_login">
+                <div class="box-head">
+                    <h1><i class="ri-school-line"></i> Institute Corner</h1>
+                </div><hr>
+
+                <ul >
+                    <a href="03_01_login_form_institute.html">
+                        <li>Institute Login</li>
+                    </a>
+                    <a href="04_Institute_Registration.html">
+                        <li>New Institute Registration </li>
+                    </a>
+
+                </ul>
+            </div>
+            <!-- //----------------------------------------------------------------------------------------------------------------------            -->
+            <div id="home_state_login">
+                <div class="box-head">
+                    <h1><i class="ri-admin-line"></i> Officer's Corner</h1>
+                </div><hr>
+                <ul>
+                    <a href="03_02_login_form_current_state.html">
+                        <li>Current Administrator</li>
+                    </a>
+                    
+
+
+                    <!-- <a href=""><li>Kahi tula watla tar takun dey</li></a> -->
+            </div>
+            <!-- -------------------------------------------------------------------------------------------------------------- -->
+            <div id="current_state_login">
+                <div class="box-head">
+                    <h1><i class="ri-edit-line"></i> Home State Admin</h1>
+                </div><hr>
+                
+                <a href="03_01_login_form_maharashtra.html">
+                    <li>Maharashtra Admin</li>
+                </a>
+                <a href="">
+                    <li></li>
+                </a>
+            </div>
+            <label for=""></label>
+
+            <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="" id="information_data">
+                <div class="box-head">
+                    <h1><i class="ri-discuss-line"></i> About Us</h1>
+                </div><hr>
+                <ul>
+                    <a href="">
+                        <li>About Us</li>
+                    </a>
+                    <a href="01_why_this_exists.html">
+                        <li>Know why this exists here::: </li>
+                    </a>
+
+                    <details>
+                        <summary>Contact Us:</summary>
+                        <ul style="margin-left: 30px;">
+                            <li><a href="mailto:bhauh6154@gmail.com">Email us now:</a></li>
+                            <details>9898989898
+                                <summary>Phone Call</summary>
+                                <summary>8989898989</summary>
+                            </details>
+                            <!-- <li>3</li> -->
+                        </ul>
+                    </details>
+
+
+                    <!-- You can add feedback and reviwe here  -->
+                    <a href="">
+                        <li>User Manuel to Read</li>
+                    </a>
+                    <!-- <a href=""><li></li></a> -->
+                </ul>
+            </div>
+
+
+        </div>
+
+       
+    <div class="statelogos">
+        <div class="nsp"><a href="https://scholarships.gov.in/"><img src="statelogo/nspimg.jpg" alt=""></a></div>
+        
+            <div class="state-text">
+                <p class="p1">Not From Maharashtra ? Don't worry...</p>
+                    <h3>Find Your Scholorship portal here &#128071;</h3>
+            </div>
+        <div class="state-logo-slider">
+          <a href="https://jnanabhumi.ap.gov.in/"><img src="statelogo/Andhrpradeshlogo.png" alt=""></a>
+          <a href="https://directorateofhighereducation.assam.gov.in/portlets/scholarships"><img src="statelogo/Assamlogo.png" alt=""></a>
+          <a href="https://www.pmsonline.bih.nic.in/pmsedu/(S(bqvsww3nwsulyfj3ipz2wouk))/pms/Default.aspx"><img src="statelogo/bjharlogo.png" alt=""></a>
+          <a href="https://schoolscholarship.cg.nic.in/flogin.aspx"><img src="statelogo/chhattisgarhlogo.png" alt=""></a>
+          <a href="https://www.digitalgujarat.gov.in/loginapp/CitizenLogin.aspx"><img src="statelogo/Gujratlogo.png" alt=""></a>
+          <a href="https://ekalyan.cgg.gov.in/"><img src="jharkhandlogo.png" alt=""></a>
+          <a href="https://scholarshipportal.mp.nic.in/Public/OtherSchemes/GB.aspx?ID=MTE="><img src="statelogo/madhya pradeshlogo.png" alt=""></a>
+          <a href="https://telanganaepass.cgg.gov.in/"><img src="statelogo/pngegg.png" alt=""></a>
+          <a href="https://ssp.tn.gov.in/"><img src="statelogo/tamilnadulogo.png" alt=""></a>
+          <a href="https://scholarship.up.gov.in/"><img src="statelogo/uttar pradeslogo.png" alt=""></a>
+          <a href="https://he.uk.gov.in/dpages/scholarship-portal"><img src="statelogo/Uttarakhandlogo.png" alt=""></a>
+          <a href="https://sje.rajasthan.gov.in/Default.aspx?PageID=346"><img src="statelogo/rajasthanlogo.png" alt=""></a>
+          <a href="https://jnanabhumi.ap.gov.in/"><img src="statelogo/Andhrpradeshlogo.png" alt=""></a>
+          <a href="https://directorateofhighereducation.assam.gov.in/portlets/scholarships"><img src="statelogo/Assamlogo.png" alt=""></a>
+          <a href="https://www.pmsonline.bih.nic.in/pmsedu/(S(bqvsww3nwsulyfj3ipz2wouk))/pms/Default.aspx"><img src="statelogo/bjharlogo.png" alt=""></a>
+          <a href="https://schoolscholarship.cg.nic.in/flogin.aspx"><img src="statelogo/chhattisgarhlogo.png" alt=""></a>
+          <a href="https://www.digitalgujarat.gov.in/loginapp/CitizenLogin.aspx"><img src="statelogo/Gujratlogo.png" alt=""></a>
+          <a href="https://ekalyan.cgg.gov.in/"><img src="statelogo/jharkhandlogo.png" alt=""></a>
+          <a href="https://scholarshipportal.mp.nic.in/Public/OtherSchemes/GB.aspx?ID=MTE="><img src="statelogo/madhya pradeshlogo.png" alt=""></a>
+          <a href="https://telanganaepass.cgg.gov.in/"><img src="statelogo/pngegg.png" alt=""></a>
+          <a href="https://ssp.tn.gov.in/"><img src="statelogo/tamilnadulogo.png" alt=""></a>
+          <a href="https://scholarship.up.gov.in/"><img src="statelogo/uttar pradeslogo.png" alt=""></a>
+          <a href="https://he.uk.gov.in/dpages/scholarship-portal"><img src="statelogo/Uttarakhandlogo.png" alt=""></a>
+          <a href="https://sje.rajasthan.gov.in/Default.aspx?PageID=346"><img src="statelogo/rajasthanlogo.png" alt=""></a>
+        </div>
+      </div>
+        <div class="footer">
+            <h2>FreeScolarship Portal</h2>
+            <p>This site is designed, developed and hosted by FreeScolarship Portal Team.</p>
+            <p>&copy; FreeScolarship. All rights reserved.</p>
+        </div>
+
+
+        <script>
+            var marquee = document.querySelector('.notice-board .notice-content ');
+            var newsmarquee = document.querySelector(" .news-message");
+            var isHovered = false;
+
+            function stopMarquee() {
+                isHovered = true;
+                marquee.stop();
+            }
+
+            function startMarquee() {
+                isHovered = false;
+                if (marquee && !isHovered) {
+                    marquee.start();
+                }
+            }
+            function stopMarque() {
+                isHovered = true;
+                newsmarquee.stop();
+            }
+            function startMarque() {
+                isHovered = false;
+                if (newsmarquee && !isHovered) {
+                    newsmarquee.start();
+                }
+            }
+
+
+            function updateHref() {
+                var dropdown = document.getElementById("loginDropdown");
+                var selectedValue = dropdown.value;
+                var href;
+
+                switch (selectedValue) {
+                    case "0":
+                        href = "01_home_page.html";
+                        break;
+                    case "1":
+                        href = "03_03_login_form_applicant.html";
+                        break;
+                    case "2":
+                        href = "03_01_login_form_institute.html";
+                        break;
+                    case "3":
+                        href = "03_02_login_form_current_state.html";
+                        break;
+                    case "4":
+                        href = "03_01_login_form_maharashtra.html";
+                        break;
+                    default:
+                        href = "login.html";
+                        break;
+                }
+
+                window.location.href = href;
+            }
+
+        </script>
+
+
+
+        <!-- <script src="homepage.js"></script> -->
+</body>
+
+</html>

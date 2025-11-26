@@ -1,0 +1,258 @@
+// Connect to the first database
+$con1 = mysqli_connect($server, $username, $password, $database1);
+if (!$con1) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Connect to the second database
+$con2 = mysqli_connect($server, $username, $password, $database2);
+if (!$con2) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Query data from the second database
+$queryaddress2 = "SELECT * FROM `institute_data` where institute_name = 'Birla Vidya Niketan'";
+$resultinstitute= mysqli_query($con2, $queryaddress2);
+if (!$resultinstitute) {
+    die("Query failed: " . mysqli_error($con2));
+}
+
+$row_institute = mysqli_num_rows($resultinstitute);
+echo"Rows = $row_institute";
+
+// Query data from the first database
+$queryaddress1 = "SELECT * FROM `address_info`";
+$resultaddress1 = mysqli_query($con1, $queryaddress1);
+if (!$resultaddress1) {
+    die("Query failed: " . mysqli_error($con1));
+}
+
+
+?>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Verification</title>
+</head>
+
+<body>
+    <h2>Data from capstone_project - address_info</h2>
+    <table border="1">
+        <tr>
+            <th>Sr.no</th>
+            <th>address</th>
+            <th>state</th>
+            <th>district</th>
+            <th>taluka</th>
+            <th>village</th>
+            <th>pincode</th>
+            <th>status</th>
+            <!-- Add more columns as needed -->
+        </tr>
+
+        <?php
+        $serialNumber = 1;
+        while ($rowaddress1 = mysqli_fetch_assoc($resultaddress1)) {
+            echo "<tr>";
+            echo "<td>" . $serialNumber . "</td>";
+            echo "<td>" . $rowaddress1['address'] . "</td>";
+            echo "<td>" . $rowaddress1['state'] . "</td>";
+            echo "<td>" . $rowaddress1['district'] . "</td>";
+            echo "<td>" . $rowaddress1['taluka'] . "</td>";
+            echo "<td>" . $rowaddress1['village'] . "</td>";
+            echo "<td>" . $rowaddress1['pincode'] . "</td>";
+            echo "<td><select name='Status' id='Status'><option value=''>Approve</option><option value=''>Reject</option></select></td>";
+            echo "</tr>";
+            $serialNumber++;
+        }
+        ?>
+
+    </table>
+
+    <h2>Data from capstoen_project - institute_data</h2>
+    <table border="1">
+        <tr>
+        <?php
+        $serialNumber = 1;
+        while ($rowins = mysqli_fetch_assoc($resultinstitute)) {
+            echo "<tr>";
+            echo "<td>" . $serialNumber . "</td>";
+            echo "<td>" . $rowins['institute_name'] . "</td>";
+            echo "<td>" . $rowins['institute_code'] . "</td>";
+            echo "<td>" . $rowins['institute_state'] . "</td>";
+            echo "<td>" . $rowins['institute_region'] . "</td>";
+            echo "<td>" . $rowins['institute_address'] . "</td>";
+            echo "<td>" . $rowins['institute_contact'] . "</td>";
+            echo "<td>" . $rowins['institute_email'] . "</td>";
+            echo "<td>" . $rowins['institute_type'] . "</td>";
+            echo "<td>" . $rowins['institute_username'] . "</td>";
+            echo "<td>" . $rowins['institute_password'] . "</td>";
+            echo "<td><select name='Status' id='Status'><option value=''>Approve</option><option value=''>Reject</option></select></td>";
+            echo "</tr>";
+            $serialNumber++;
+        }?>
+        </tr>
+
+        <?php
+        // Add similar logic to display data from the institute_data table
+        ?>
+
+    </table>
+</body>
+
+</html>
+
+<?php
+// Close connections
+mysqli_close($con1);
+mysqli_close($con2);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+see_studnet::::::::::::::::::::::
+
+
+
+
+
+
+
+
+
+
+<!-- <?php
+
+// require("06_Connection_for_Institute_Verification.php");
+
+// if (isset($_GET['institute_name'])) {
+//     $institute = $_GET['institute_name'];
+//     echo "hello:$institute";
+// }
+
+// $queryForAddress= "SELECT * FROM `address_info` ";
+// $queryForUser_info= "SELECT * FROM `user_info` where  collge_name = $institute ";
+// $queryForPastQualification="SELECT * FROM `past_qualification` ";
+// $queryForCurrentCourseDetails="SELECT * FROM `current_course` ";
+
+// $result_for_address = mysqli_query($con1,$queryForAddress);
+// $result_for_user_info = mysqli_query($con1,$queryForUser_info);
+// $result_for_past_qualification = mysqli_query($con1,$queryForPastQualification);
+// $result_for_current_course = mysqli_query($con1,$queryForCurrentCourseDetails);
+
+// if(!$result_for_address ||!$result_for_user_info||!$result_for_past_qualification||!$result_for_current_course){
+//     echo "Error";
+// }else{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+ ?> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+// require("06_Connection_for_Institute_Verification.php");
+
+// if (isset($_GET['institute_name'])) {
+//     $institute = $_GET['institute_name'];
+//     echo "hello:$institute";
+// }
+
+// // Query for address_info
+// $queryForAddress = "SELECT * FROM `address_info` WHERE college_name = ?";
+// $stmt_address = mysqli_prepare($con1, $queryForAddress);
+// mysqli_stmt_bind_param($stmt_address, "s", $institute);
+// mysqli_stmt_execute($stmt_address);
+// $result_for_address = mysqli_stmt_get_result($stmt_address);
+
+// if (!$result_for_address) {
+//     echo "Error fetching address information: " . mysqli_error($con1);
+// } else {
+//     // Process and display address_info data
+//     while ($row_address = mysqli_fetch_assoc($result_for_address)) {
+//         // Display address_info data
+//     }
+// }
+
+// // Query for past_qualification
+// $queryForPastQualification = "SELECT * FROM `past_qualification` WHERE college_name = ?";
+// $stmt_past_qualification = mysqli_prepare($con1, $queryForPastQualification);
+// mysqli_stmt_bind_param($stmt_past_qualification, "s", $institute);
+// mysqli_stmt_execute($stmt_past_qualification);
+// $result_for_past_qualification = mysqli_stmt_get_result($stmt_past_qualification);
+
+// if (!$result_for_past_qualification) {
+//     echo "Error fetching past qualification information: " . mysqli_error($con1);
+// } else {
+//     // Process and display past_qualification data
+//     while ($row_past_qualification = mysqli_fetch_assoc($result_for_past_qualification)) {
+//         // Display past_qualification data
+//     }
+// }
+
+// // Query for current_course
+// $queryForCurrentCourse = "SELECT * FROM `current_course` WHERE college_name = ?";
+// $stmt_current_course = mysqli_prepare($con1, $queryForCurrentCourse);
+// mysqli_stmt_bind_param($stmt_current_course, "s", $institute);
+// mysqli_stmt_execute($stmt_current_course);
+// $result_for_current_course = mysqli_stmt_get_result($stmt_current_course);
+
+// if (!$result_for_current_course) {
+//     echo "Error fetching current course information: " . mysqli_error($con1);
+// } else {
+//     // Process and display current_course data
+//     while ($row_current_course = mysqli_fetch_assoc($result_for_current_course)) {
+//         // Display current_course data
+//     }
+// }
+?>
+

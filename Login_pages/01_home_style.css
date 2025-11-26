@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    background-color: whitesmoke;
+    font-family:Calibri;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+
+}
+.navbar{
+    background-color: rgb(165, 243, 217);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 1px solid rgba(0, 0, 0, 0.642); */
+
+}
+.nav-div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: whitesmoke;
+
+    
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+li a{
+    font-size: 18px;
+    margin-right: 24px;
+    font-weight: bold;
+    color: white;
+}
+.navbar button{
+    width: 90px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(206, 46, 46);
+    margin: 5px;
+
+}
+.navbar button a{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.heading-news{
+    width: 100%;
+    height: auto;
+   overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.564);
+    /* display: inline-block; */
+}
+.news-heading{
+    background-color: crimson;
+    color: white;
+    margin-top: 10px;
+  padding: 6px;
+    font-size: 20px ;
+}
+.news-message{
+    font-size: 18px;
+    color: red;
+    width: 90%;
+ 
+}
+
+#main{
+    background-color: rgba(137, 202, 243, 0.68);
+
+}
+
+.image-slides{
+    margin: 2px 0;
+}
+
+#All-modules{
+    /* margin-top: 5px; */
+    min-height: 35vh;
+    width: 100%;
+    /* background: rgb(140, 173, 244); */
+    background-color: rgb(126, 157, 224);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-evenly;
+   
+}
+
+
+#All-modules #new-applicant, #institute_login ,#home_state_login ,#current_state_login, #information_data{
+    
+    width: 150px;
+    min-height: 200px;
+    background-color: rgb(163, 238, 250);
+    margin: 5px;
+    padding: 10px 25px;
+    display: block;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+    border: solid 1px rgb(0, 165, 242);
+    border-radius: 10px;
+    
+
+    
+    
+
+}
+#All-modules #new-applicant, #institute_login ,#home_state_login ,#current_state_login, #information_data , a{
+    text-decoration:none;
+    /* margin: 0 2px; */
+    line-height: 25px;
+    display: block;
+
+    
+
+}
+
+#All-modules #new-applicant, #institute_login ,#home_state_login ,#current_state_login, #information_data , h1{
+    width: 100vw;
+    font-size: 100%;
+    /* background-color: rgb(13, 189, 189); */
+}
+
+.boards {
+    margin: 15px 0;
+    /* background-color: rgba(137, 202, 243, 0.68); */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.notice-board{
+    width: 30%;
+    margin: 10px;
+    background-color: whitesmoke;
+    border: 1px solid #3174f1c8  ;
+
+}
+
+.notice-board-heading-text{
+
+    color: white;
+    background-color: #3174f1c8;
+    display: block ;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+marquee{
+    color: red;
+    /* line-height: 10px; */
+}
+
+marquee li {
+    line-height: 20px;
+    margin: 10px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.table-head tr th{
+    background-color: #3174f1c8;
+
+}
+
+table th, td, tr {
+    padding: 27px 55px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer h2{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}

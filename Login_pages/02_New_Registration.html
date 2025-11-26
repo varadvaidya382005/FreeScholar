@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="02_New_Registration.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="02_New_Registration_Database_Evaluation.php" class="container" method="post">
+        <b>
+            <h1>Registration Form For New Applicant</h1>
+        </b>
+
+        <div class="Names">
+            <div class="div1">
+                <label for="">First Name</label><br>
+                <input type="text" name="" id="new_registration_first_name" class="inputBox" onblur="checkFirstName()"
+                    required><br>
+            </div>
+            <div class="div2">
+                <label for="">Last Name</label><br>
+                <input type="text" name="" id="new_registration_last_name" class="inputBox" onblur="checkLastName()"
+                    required><br>
+            </div>
+        </div>
+
+
+
+        <div class="Names">
+            <div>
+                <label for="">Email</label><br>
+                <input type="email" name="" id="new_registration_email" class="inputBox" onblur="checkEmail()"
+                    required><br>
+            </div>
+            <div>
+                <label for="">Contact</label><br>
+                <input type="text" name="" id="new_registration_contact" class="inputBox" onblur="checkContact()"
+                    required><br>
+            </div>
+        </div>
+
+        <div class="Names">
+            <div>
+                <label for="">DOB</label><br>
+                <input type="date" name="" id="new_registration_DOB" class="inputBox" onblur="checkDOB()" required><br>
+            </div>
+            <div>
+                <label for="">Username</label><br>
+                <input type="text" name="username_selection" id="username_selection" class="inputBox" onblur="checkUsername()"
+                    required><br>
+            </div>
+        </div>
+
+
+        <div class="Names">
+            <div>
+                <label for="">Password</label><br>
+                <input type="password" name="password_generation" id="password_generation" class="inputBox" onblur="checkPassword()"
+                    required><br>
+            </div>
+            <div>
+                <label for="">Confirm Password</label><br>
+                <input type="text" name="" id="confirm_password" class="inputBox" onblur="checkConfirmPassword()"
+                    required><br>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Submit" id="submit_button" disabled="false">
+        </div>
+    </form>
+
+    <script type="text/javascript" language="javascript" src="02_New_Registration.js">
+    </script>
+</body>
+
+</html>
